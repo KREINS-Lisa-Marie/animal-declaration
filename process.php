@@ -30,10 +30,17 @@ if (array_key_exists('vemail', $_REQUEST)){
     $_SESSION['errors']['vemail'] = 'Vous devez repeter votre email';
 }
 
-
 /* PHONE*/
 if (array_key_exists('phone', $_REQUEST)){
     $phone =trim($_REQUEST['phone']);
+
+
+    if (is_numeric($phone)){
+        $_SESSION['errors']['phone'] = 'Un numéro de téléphone valide est requis';
+    }
+}else {
+    $_SESSION['errors']['phone'] = 'Le numéro de téléphone est requis';
+}
 
 if (is_numeric($phone)){
     $_SESSION['errors']['phone'] = 'Un numéro de téléphone valide est requis';
@@ -41,6 +48,7 @@ if (is_numeric($phone)){
 }else {
     $_SESSION['errors']['phone'] = 'Le numéro de téléphone est requis';
 }
+
 
 /*
  *S'il y a des erreurs, on redirige vers la page du formulaire, en mémorisant le temps d'une requête les erreurs et les anciennes données
