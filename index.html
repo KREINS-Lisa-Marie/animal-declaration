@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J'ai perdu mon animal</title>
+</head>
+<body>
+<h1>
+    Déclaration de perte d'animal
+</h1>
+<form action="/process.php" method="post">
+    <fieldset>
+        <legend>
+            Vos coordonnées&nbsp;:
+        </legend>
+        <div>
+            <label for="email">
+            *Email
+            </label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div>
+            <label for="vemail">
+                *Confirmation email
+            </label>
+            <input type="email" name="vemail" id="vemail" required>
+        </div>
+        <button type="submit">
+            Déclarer la perte de mon animal
+        </button>
+
+    </fieldset>
+
+</form>
+</body>
+</html>
