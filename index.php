@@ -59,10 +59,16 @@
             </div>
         <?php endif;?>
 <div>
+
     <label for="phone"> *Téléphone</label><input type="tel"
            name="phone"
            id="phone"
            placeholder="0499 10 10 10"
+    <label for="phone"> *Téléphone</label>
+    <input type="tel"
+           name="phone"
+           id="phone"
+
         <?php if(isset($_SESSION['old']['phone'])):?>
             value="<?= $_SESSION['old']['phone']?>"
         <?php endif;?>
@@ -76,13 +82,22 @@
             </div>
         <?php endif;?>
         <div>
+
             <label for="country">Pays</label><select name="country" id="country">
+
+            <label for="country">Pays</label>
+            <select name="country" id="country">
+
                 <option value="BE" selected>Belgique</option>
                 <option value="FR">France</option>
                 <option value="DE">Allemage</option>
                 <option value="LU">Luxembourg</option>
             </select>
         </div>
+
+        <button type="submit">
+            Déclarer la perte de mon animal
+        </button>
 
     </fieldset>
     <button type="submit">
