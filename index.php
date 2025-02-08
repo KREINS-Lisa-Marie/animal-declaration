@@ -56,9 +56,31 @@
             </div>
         <?php endif;?>
 <div>
-    <label for="phone"> Numéro de téléphone</label>
-    <input type="tel" name="phone" id="phone" required>
+    <label for="phone"> *Téléphone</label>
+    <input type="tel"
+           name="phone"
+           id="phone"
+        <?php if(isset($_SESSION['old']['phone'])):?>
+            value="<?= $_SESSION['old']['phone']?>"
+        <?php endif;?>
+           required>
 </div>
+        <?php if(isset($_SESSION['errors']['phone'])): ?>
+            <div>
+                <p>
+                    <?= $_SESSION['errors']['phone'];?>
+                </p>
+            </div>
+        <?php endif;?>
+        <div>
+            <label for="country">Pays</label>
+            <select name="country" id="country">
+                <option value="BE" selected>Belgique</option>
+                <option value="FR">France</option>
+                <option value="DE">Allemage</option>
+                <option value="LU">Luxembourg</option>
+            </select>
+        </div>
         <button type="submit">
             Déclarer la perte de mon animal
         </button>
