@@ -5,6 +5,7 @@ session_start();
 
 $email= '';
 $vemail='';
+$phone='';
 /*
  * Valider les 2 champs pour email
  * */
@@ -28,6 +29,16 @@ if (array_key_exists('vemail', $_REQUEST)) {
     $_SESSION['errors']['vemail'] = 'Vous devez repeter votre email';
 }
 
+/* PHONE*/
+if (array_key_exists('phone', $_REQUEST)){
+    $phone =trim($_REQUEST['phone']);
+
+    if (is_numeric($phone)){
+        $_SESSION['errors']['phone'] = 'Un numéro de téléphone valide est requis';
+    }
+}else {
+    $_SESSION['errors']['phone'] = 'Le numéro de téléphone est requis';
+}
 /*
  *S'il y a des erreurs, on redirige vers la page du formulaire, en mémorisant le temps d'une requête les erreurs et les anciennes données
  * */
@@ -62,6 +73,12 @@ if(!is_null($_SESSION['errors'])){
         </dt>
         <dd>
             <?= $email?>
+        </dd>
+        <dt>
+            Numéro de téléphone&nbsp;:
+        </dt>
+        <dd>
+            <?= $phone?>
         </dd>
 </dl>
 </body>
