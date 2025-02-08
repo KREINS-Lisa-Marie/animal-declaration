@@ -55,10 +55,13 @@
                 </p>
             </div>
         <?php endif;?>
+<div>
+    <label for="phone"> Numéro de téléphone</label>
+    <input type="tel" name="phone" id="phone" required>
+</div>
         <button type="submit">
             Déclarer la perte de mon animal
         </button>
-
     </fieldset>
 
 </form>
