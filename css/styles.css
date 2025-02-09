@@ -29,8 +29,9 @@ div{
     border: 1px solid var(--border);
     font-weight: 700;
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.05) ;
-/*
-    display: flex;*/
+    margin-bottom: 32px;
+    /*
+        display: flex;*/
 }
 div:nth-of-type(2){
     background-color: var(--label-background-light);
@@ -59,13 +60,12 @@ fieldset{
     border: none;
 }
 button{
-background-color: var(--button);
+    background-color: var(--button);
     color: var(--white-text);
     padding: 8px;
     border: none;
     border-radius: 8px;
     margin-right: 24px;
     margin-left:calc(100% - 24px - 222px);
-    margin-top: 32px;
     font-weight: 600;
 }
