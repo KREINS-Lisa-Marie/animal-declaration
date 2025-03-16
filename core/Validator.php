@@ -2,7 +2,7 @@
 
 namespace Tecgdcs\Screencast;
 use Tecgdcs\Screencast\Exception\ValidationRuleNotFoundException;
-
+use Tecgdcs\Screencast\Response;
 
 
 class Validator
@@ -95,8 +95,13 @@ class Validator
 
         if (!is_null($_SESSION['errors'])) {
             $_SESSION['old'] = $_REQUEST;
-            header('Location: /index.php');
-            exit;
+           // Response::redirect('./index.php');
+            Response::back();
+
+
+
+/*            header('Location: /index.php');
+            exit;*/
         }
     }
 
