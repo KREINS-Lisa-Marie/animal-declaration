@@ -1,0 +1,18 @@
+{
+    "name": "tecgdcs/screencast",
+    "description": "A small project to learn servor dev with PHP",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "KREINS-Lisa-Marie",
+            "email": "lisa-marie.kreins@student.hepl.be"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+        "Tecgdcs\\Screencast\\": "./core/"
+        }
+    },
+    "require": {}
+}
